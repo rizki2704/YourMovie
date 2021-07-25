@@ -18,4 +18,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, CreateAccount.class);
         startActivity(intent);
     }
+
+    public void moveHome(View view) {
+        Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+        startActivity(intent);
+    }
 }

@@ -45,6 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Login"
+        android:onClick="moveHome"
         android:textColor="@color/grey"
         android:background="@drawable/ic_button"/>
     <LinearLayout
