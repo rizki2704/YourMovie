@@ -11,13 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.YourMovie">
-        <activity android:name=".DetailActivity"></activity>
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".WhislistActivity" />
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".CreateAccount" />
-        <activity android:name=".SplashScreen" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.DetailActivity"></activity>
+        <activity android:name=".ui.SplashScreen" />
+        <activity android:name=".ui.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

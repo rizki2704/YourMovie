@@ -1,4 +1,4 @@
-package com.rizki.yourmovie;
+package com.rizki.yourmovie.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Window;
+
+import com.rizki.yourmovie.R;
 
 public class SplashScreen extends AppCompatActivity {
 
@@ -21,7 +23,7 @@ public class SplashScreen extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                startActivity(new Intent(getApplicationContext(), HomeActivity.class));
                 finish();
             }
         }, 2000L);

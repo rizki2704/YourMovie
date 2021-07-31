@@ -9,6 +9,7 @@
         android:layout_height="100dp"
         android:src="@drawable/logo"
         android:layout_centerHorizontal="true"
+        android:onClick="ClickLogo"
         android:layout_marginTop="30dp"/>
     <TextView
         android:id="@+id/namaLogo"
@@ -35,6 +36,7 @@
             android:layout_weight="1"
             android:padding="12dp"
             android:textColor="@color/grey"
+            android:onClick="ClickHome"
             android:text="Home" />
 
         <ImageView
@@ -58,7 +60,8 @@
             android:layout_weight="1"
             android:padding="12dp"
             android:textColor="@color/grey"
-            android:text="Whislist" />
+            android:text="Whislist"
+            android:onClick="ClickWhislist"/>
 
         <ImageView
             android:layout_width="wrap_content"
@@ -66,53 +69,5 @@
             android:layout_marginEnd="48dp"
             android:src="@drawable/ic_baseline_bookmark_24" />
     </LinearLayout>
-    <LinearLayout
-        android:id="@+id/NavProfile"
-        android:layout_below="@id/NavWhislist"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_weight="1"
-            android:padding="12dp"
-            android:textColor="@color/grey"
-            android:text="Profile" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="48dp"
-            android:src="@drawable/ic_baseline_person_24" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_marginTop="250dp"
-        android:id="@+id/NavLogout"
-        android:layout_below="@id/NavProfile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_weight="1"
-            android:padding="12dp"
-            android:textColor="@color/grey"
-            android:text="Logout" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="48dp"
-            android:src="@drawable/ic_logout" />
-    </LinearLayout>
-
 
 </RelativeLayout>
