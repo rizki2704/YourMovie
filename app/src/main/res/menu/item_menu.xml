@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/nav_home"
+    android:title="home"
+    android:icon="@drawable/logo"/>
+    <item android:id="@+id/nav_whislist"
+        android:title="whislist"
+        android:icon="@drawable/ic_baseline_bookmark_24"/>
+
+</menu>

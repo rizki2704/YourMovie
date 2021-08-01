@@ -6,12 +6,10 @@ import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
-import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.rizki.yourmovie.R;
-import com.rizki.yourmovie.ui.fragment.MovieFragment;
+import com.rizki.yourmovie.ui.movie.MovieFragment;
 import com.rizki.yourmovie.ui.fragment.WhislistFragment;
 
 import org.jetbrains.annotations.NotNull;

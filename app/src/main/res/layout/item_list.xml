@@ -48,7 +48,7 @@
 
 
         <TextView
-            android:id="@+id/tv_sutradara"
+            android:id="@+id/tv_release"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_film_title"
@@ -59,13 +59,13 @@
             android:ellipsize="end"
             android:maxLines="5"
             android:textColor="@color/grey"
-            tools:text="Sutradara" />
+            tools:text="Tanggal Release" />
 
         <TextView
             android:id="@+id/tv_deskripsi"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/tv_sutradara"
+            android:layout_below="@id/tv_release"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_toEndOf="@id/image_wrapper"
