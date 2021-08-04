@@ -1,6 +1,7 @@
 package com.rizki.yourmovie.ui.movie;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.rizki.yourmovie.data.source.local.entity.MovieEntity;
 import com.rizki.yourmovie.databinding.ItemListBinding;
+import com.rizki.yourmovie.ui.detail.DetailActivity;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -64,9 +66,16 @@ public class MovieAdapter extends PagedListAdapter<MovieEntity, MovieAdapter.Mov
         void bind(MovieEntity movie) {
             binding.tvFilmTitle.setText(movie.getTitle());
             binding.tvRelease.setText(movie.getReleaseDate());
+            itemView.setOnClickListener(view -> {
+                Intent intent = new Intent(itemView.getContext(), DetailActivity.class);
+                intent.putExtra(DetailActivity.EXTRA_MOVIE, movie.getId());
+                itemView.getContext().startActivity(intent);
+
+            });
             Glide.with(itemView.getContext())
                     .load(IMAGE_URL + movie.getPosterPath())
                     .into(binding.imgCover);
+            binding.tvDeskripsi.setText(movie.getOverview());
         }
     }
 }

@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.rizki.yourmovie.data.MovieRepository;
 import com.rizki.yourmovie.di.Injection;
+import com.rizki.yourmovie.ui.detail.DetailViewModel;
 import com.rizki.yourmovie.ui.movie.MovieViewModel;
 
 public class ViewModelFactory extends ViewModelProvider.NewInstanceFactory {
@@ -31,6 +32,8 @@ public class ViewModelFactory extends ViewModelProvider.NewInstanceFactory {
     public <T extends ViewModel> T create(@NonNull Class<T> modelClass){
         if (modelClass.isAssignableFrom(MovieViewModel.class)){
             return (T) new MovieViewModel(mMovieRepository);
+        }else if (modelClass.isAssignableFrom(DetailViewModel.class)){
+            return (T) new DetailViewModel(mMovieRepository);
         }
         throw new IllegalArgumentException("unknown viewModel Class: "+ modelClass.getName());
     }
