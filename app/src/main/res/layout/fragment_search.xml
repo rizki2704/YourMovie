@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/DrawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary">
+
+    <EditText
+        android:id="@+id/et_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="44dp"
+        android:background="@drawable/ic_edittext"
+        android:drawableRight="@drawable/ic_baseline_search_24"
+        android:hint="search"
+        android:includeFontPadding="true"
+        android:paddingLeft="15dp"
+        android:imeOptions="actionSearch"
+        android:maxLines="1"
+        android:inputType="text"
+        android:textColorHint="@color/grey" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_movie"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:layout_below="@id/et_search"
+        android:layout_marginTop="10dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:listitem="@layout/item_list" />
+
+
+</RelativeLayout>

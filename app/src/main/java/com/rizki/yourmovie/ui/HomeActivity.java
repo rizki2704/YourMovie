@@ -9,8 +9,9 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.rizki.yourmovie.R;
+import com.rizki.yourmovie.ui.favorite.WhislistFragment;
 import com.rizki.yourmovie.ui.movie.MovieFragment;
-import com.rizki.yourmovie.ui.fragment.WhislistFragment;
+import com.rizki.yourmovie.ui.search.SearchFragment;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -31,12 +32,15 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
                 Fragment fragment = null;
-                switch (item.getItemId()){
+                switch (item.getItemId()) {
                     case R.id.nav_home:
-                        fragment= new MovieFragment();
+                        fragment = new MovieFragment();
+                        break;
+                    case R.id.nav_search:
+                        fragment = new SearchFragment();
                         break;
                     case R.id.nav_whislist:
-                        fragment= new WhislistFragment();
+                        fragment = new WhislistFragment();
                         break;
                 }
                 getSupportFragmentManager().beginTransaction().replace(R.id.body_container, fragment).commit();

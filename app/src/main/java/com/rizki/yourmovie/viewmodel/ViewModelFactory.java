@@ -9,7 +9,9 @@ import androidx.lifecycle.ViewModelProvider;
 import com.rizki.yourmovie.data.MovieRepository;
 import com.rizki.yourmovie.di.Injection;
 import com.rizki.yourmovie.ui.detail.DetailViewModel;
+import com.rizki.yourmovie.ui.favorite.FavoriteViewModel;
 import com.rizki.yourmovie.ui.movie.MovieViewModel;
+import com.rizki.yourmovie.ui.search.SearchViewModel;
 
 public class ViewModelFactory extends ViewModelProvider.NewInstanceFactory {
     private static volatile ViewModelFactory INSTANCE;
@@ -34,6 +36,10 @@ public class ViewModelFactory extends ViewModelProvider.NewInstanceFactory {
             return (T) new MovieViewModel(mMovieRepository);
         }else if (modelClass.isAssignableFrom(DetailViewModel.class)){
             return (T) new DetailViewModel(mMovieRepository);
+        }else if (modelClass.isAssignableFrom(FavoriteViewModel.class)){
+            return (T) new FavoriteViewModel(mMovieRepository);
+        } else if (modelClass.isAssignableFrom(SearchViewModel.class)) {
+            return (T) new SearchViewModel(mMovieRepository);
         }
         throw new IllegalArgumentException("unknown viewModel Class: "+ modelClass.getName());
     }

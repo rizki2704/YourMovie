@@ -19,8 +19,9 @@
             <ImageView
                 android:id="@+id/tv_image_banner"
                 android:layout_width="match_parent"
-                android:layout_height="380dp"
+                android:layout_height="480dp"
                 android:adjustViewBounds="true"
+                android:layout_marginBottom="20dp"
                 android:alpha="0.2"
                 android:scaleType="centerCrop"
                 android:src="@color/black" />
@@ -33,13 +34,12 @@
 
                 <ImageView
                     android:id="@+id/tv_detail_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="240dp"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="24dp"
+                    android:layout_width="240dp"
+                    android:layout_height="320dp"
                     android:adjustViewBounds="true"
-                    android:scaleType="centerCrop"
-                    android:src="@color/second" />
+                    android:src="@color/second"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="24dp" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -53,7 +53,7 @@
 
                         <TextView
                             android:id="@+id/tv_detail_title"
-                            android:layout_width="wrap_content"
+                            android:layout_width="200dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginBottom="4dp"
@@ -143,6 +143,7 @@
                 android:background="@drawable/ic_button"
                 android:text="Trailer"
                 android:textAllCaps="false"
+                android:layout_marginBottom="24dp"
                 android:textColor="@color/grey"/>
         </LinearLayout>
 

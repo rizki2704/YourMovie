@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey;
 
 @Entity(tableName = "movie_entities")
 public class MovieEntity {
-    public MovieEntity(int id, String title, String posterPath, String releaseDate, String backdropPath, String genres, Double voteAverage ,String overview, Boolean isFavorite) {
+    public MovieEntity(int id, String title, String posterPath, String releaseDate, String backdropPath, String genres, Double voteAverage, String overview,  Boolean isFavorite) {
         this.id = id;
         this.title = title;
         this.posterPath = posterPath;
@@ -48,6 +48,7 @@ public class MovieEntity {
 
     @ColumnInfo(name = "overview")
     private String overview;
+
 
     @ColumnInfo(name = "isFavorite")
     private Boolean isFavorite;
