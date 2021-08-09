@@ -47,6 +47,9 @@ public class WhislistFragment extends Fragment {
             viewModel = new ViewModelProvider(this, factory).get(FavoriteViewModel.class);
             adapter = new FavoriteAdapter();
             viewModel.getFavoriteMovies().observe(getViewLifecycleOwner(), movies->{
+                if(movies.size() != 0){
+                 binding.tvFavorite.setVisibility(View.GONE);
+                }
                 adapter.submitList(movies);
             });
             binding.rvMovie.setLayoutManager(new LinearLayoutManager(getContext()));

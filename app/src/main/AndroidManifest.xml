@@ -12,13 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.YourMovie">
         <activity android:name=".ui.detail.DetailActivity"></activity>
-        <activity android:name=".ui.SplashScreen" />
-        <activity android:name=".ui.HomeActivity">
+        <activity android:name=".ui.SplashScreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".ui.HomeActivity">
+
         </activity>
     </application>
 
