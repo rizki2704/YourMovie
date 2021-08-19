@@ -10,7 +10,7 @@
         android:title="Search" />
     <item
         android:id="@+id/nav_whislist"
-        android:icon="@drawable/ic_baseline_bookmark_24"
+        android:icon="@drawable/heart"
         android:title="whislist" />
 
 
